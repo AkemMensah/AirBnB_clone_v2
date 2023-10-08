@@ -7,10 +7,10 @@ apt-get update
 apt-get -y install nginx
 
 # Create the folders /data /web_static /releases /test/ if it doesn’t already exist
-mkdir -p /data/web_static/releases/test/
+mkdir -p ~/data/web_static/releases/test/
 
 # Create the folder /data/web_static/shared/ if it doesn’t already exist
-mkdir -p /data/web_static/shared/
+mkdir -p ~/data/web_static/shared/
 
 # Create a fake HTML file /data/web_static/releases/test/index.html
 echo '<html>
