@@ -34,7 +34,23 @@ sudo chown -hR ubuntu:ubuntu ~/data/
 # Update the Nginx configuration to serve the content of
 # /data/web_static/current/ to hbnb_static
 # (ex: https://mydomainname.tech/hbnb_static).
-sudo sed -i '51 i \\n\tlocation /hbnb_static {\n\talias ~/data/web_static/current;\n\t}' /etc/nginx/sites-available/default
+#sudo sed -i '51 i \\n\tlocation /hbnb_static {\n\talias ~/data/web_static/current;\n\t}' /etc/nginx/sites-available/default
+echo 'server {
+    listen 80 default_server;
+            listen [::]:80 default_server;
+	                add_header X-Served-By 316263-web-01;
+			                root   ~/data/web_static/current;
+					                    index  index.html index.htm;
 
+							                            location /redirect_me {
+										                                    return 301 https//YouTube.com/;
+														                                        }
+
+																		                                error_page 404 /404.html;
+																						                                    location /404 {
+																										                                              root /var/www/html;
+																															                                                      internal;
+																																					                                                          }
+																																											                                      }' > /etc/nginx/sites-available/default
 # Restart Nginx after updating the configuration:
 sudo service nginx restart
