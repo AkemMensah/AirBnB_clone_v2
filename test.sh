@@ -1,5 +1,7 @@
 #!/usr/bin/bash
-cd ~ 
+cd $HOME
+pwd
 mkdir data
 mkdir -p data/web_static/test/
+pwd
 ls
