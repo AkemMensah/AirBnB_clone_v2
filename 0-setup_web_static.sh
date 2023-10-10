@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 # Bash script that sets up web servers for the deployment of web_static
-
+cd ~
 apt-get update
 
 # Install Nginx if it not already installed
 apt-get -y install nginx
-
+cd ~
+mkdir data
+cd ~
+mkdir /data/web_static/
+exit 0
 # Create the folders /data /web_static /releases /test/ if it doesn’t already exist
 mkdir -p ~/data/web_static/releases/test/
 
