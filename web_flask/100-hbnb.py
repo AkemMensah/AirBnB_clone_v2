@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 '''A simple Flask web application.
 '''
-from flask import Flask, render_template, Markup
+from flask import Flask, render_template
+from markupsafe import Markup
 
 from models import storage
 from models.amenity import Amenity

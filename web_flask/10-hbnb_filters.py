@@ -14,6 +14,8 @@ def filters():
     """display a HTML page like 6-index.html from static"""
     states = storage.all("State").values()
     amenities = storage.all("Amenity").values()
+    for amenity in amenities:
+        print(amenity.name)
     return render_template('10-hbnb_filters.html', states=states,
                            amenities=amenities)
 
